@@ -1,0 +1,89 @@
+Easy
+1. Tushunchalar:
+
+Ma'lumot (Data): Bu har qanday fakt, raqam, matn yoki tasvir bo‘lib, u kompyuterda saqlanishi mumkin.
+
+Ma'lumotlar bazasi (Database): Bu ma’lumotlarni tartib bilan saqlovchi va boshqaruvchi tizim. Misol: kitoblar ro‘yxati, mijozlar ma’lumotlari.
+
+Aloqaviy ma'lumotlar bazasi (Relational Database): Ma’lumotlar jadvallar ko‘rinishida saqlanadi va ular orasida aloqalar (relationship) mavjud. Misol: SQL Server.
+
+Jadval (Table): Bu ma’lumotlar bazasidagi satrlar (rows) va ustunlar (columns)dan iborat strukturadir.
+
+
+2. SQL Server’ning 5 ta asosiy xususiyati:
+
+Katta hajmdagi ma’lumotlarni samarali boshqaradi.
+
+Aloqaviy (relational) ma’lumotlar bazasi tizimi hisoblanadi.
+
+Havfsizlik yuqori darajada ta’minlangan (authentication va encryption mavjud).
+
+SSMS orqali qulay interfeysda ishlash mumkin.
+
+Replikatsiya, backup va restore kabi kuchli vositalarga ega.
+
+3. SQL Server autentifikatsiya turlari:
+
+Windows Authentication — Windows foydalanuvchi akkauntidan foydalaniladi.
+
+SQL Server Authentication — Maxsus SQL login va parol bilan ulanish amalga oshiriladi.
+
+
+Medium
+
+1. Yangi baza yaratish (SSMS):
+
+create database SchoolDB 
+
+use SchoolDB
+
+CREATE TABLE Students (StudentID INT PRIMARY KEY, Name varchar(50), Age INT);
+  
+  3. SQL Server, SSMS va SQL o‘rtasidagi farqlar:
+
+SQL Server-Microsoft kompaniyasi ishlab chiqqan ma’lumotlar bazasi boshqaruv tizimi (DBMS).
+
+SSMS-SQL Server bilan ishlash uchun grafik interfeys (GUI) vositasi. Yani, foydalanuvchi uchun qulay muhiti.
+
+SQL-Ma’lumotlar bazasi bilan ishlash uchun ishlatiladigan so‘rovlar tili (Structured Query Language).
+
+
+Hard 
+1. SQL buyruqlar turkumlari:
+
+DQL(Data Query Language) - Ma’lumotlarni so‘rash (query). Misol: SELECT * FROM Students;
+
+DML(Data Manipulation Language) - Ma’lumotlarni qo‘shish, o‘zgartirish, o‘chirish. Misol: INSERT, UPDATE, DELETE
+
+DDL	Data Definition Language	Jadval yoki struktura yaratish. Misol: CREATE TABLE, ALTER, DROP
+
+DCL	Data Control Language	Foydalanuvchi huquqlarini boshqarish. Misol: GRANT, REVOKE
+
+TCL	Transaction Control Language	Transactionlarni boshqarish. Misol: BEGIN, COMMIT, ROLLBACK
+
+2. Students jadvaliga 3 ta yozuv qo‘shish:
+
+INSERT INTO Students (StudentID, Name, Age) values
+(1, 'Alisher Maxmudov', 20),
+(2, 'Shahnoza Inagamova', 19),
+(3, 'Elbek Isroilov', 21);
+
+3. AdventureWorksDW2022.bak faylini tiklash (restore) bosqichlari:
+
+🧩 .bak faylni tiklash bosqichlari:
+
+Faylni yuklab oling:
+Yuklab olish havolasi
+
+Faylni quyidagi papkaga saqlang:
+C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\
+
+SSMS dasturini oching.
+
+"Databases" ustiga o‘ng tugma bosib "Restore Database" ni tanlang.
+
+Source → “Device” ni tanlang, va .bak fayl joylashgan manzilni ko‘rsating.
+
+Faylni tanlagach, "OK" tugmasini bosing.
+
+Restore jarayoni tugagach, yangi ma’lumotlar bazasi AdventureWorksDW2022 nomi bilan mavjud bo‘ladi.
